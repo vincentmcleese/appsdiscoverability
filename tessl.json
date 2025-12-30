@@ -1,0 +1,41 @@
+{
+  "name": "project",
+  "dependencies": {
+    "tessl/npm-clsx": {
+      "version": "2.1.0"
+    },
+    "tessl/npm-eslint": {
+      "version": "9.34.0"
+    },
+    "tessl/npm-framer-motion": {
+      "version": "12.23.0"
+    },
+    "tessl/npm-lucide-react": {
+      "version": "0.542.0"
+    },
+    "tessl/npm-motion": {
+      "version": "12.23.0"
+    },
+    "tessl/npm-next": {
+      "version": "16.0.0"
+    },
+    "tessl/npm-postcss": {
+      "version": "8.5.0"
+    },
+    "tessl/npm-react-dom": {
+      "version": "19.2.0"
+    },
+    "tessl/npm-react-use-measure": {
+      "version": "2.1.0"
+    },
+    "tessl/npm-react": {
+      "version": "19.2.0"
+    },
+    "tessl/npm-tailwindcss": {
+      "version": "3.4.0"
+    },
+    "tessl/npm-typescript": {
+      "version": "5.9.0"
+    }
+  }
+}
