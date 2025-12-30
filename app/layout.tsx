@@ -62,7 +62,7 @@ export default function RootLayout({
           `}
         </Script>
         <SmoothScroll>
-          <Navbar />
+          {/* <Navbar /> */}
           <MainContent>
             {children}
           </MainContent>
