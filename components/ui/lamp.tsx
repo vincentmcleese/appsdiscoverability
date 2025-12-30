@@ -18,10 +18,14 @@ export const LampContainer = ({
         className
       )}
     >
+      {/* Radial gradient overlay - lighter at bottom corners */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_1200px_800px_at_bottom_left,_var(--tw-gradient-stops))] from-slate-700 via-slate-750/50 to-transparent z-10"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_1200px_800px_at_bottom_right,_var(--tw-gradient-stops))] from-slate-700 via-slate-750/50 to-transparent z-10"></div>
+      
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 ">
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
-          whileInView={{ opacity: 1, width: "30rem" }}
+          animate={{ opacity: 1, width: "30rem" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -37,7 +41,7 @@ export const LampContainer = ({
         </motion.div>
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
-          whileInView={{ opacity: 1, width: "30rem" }}
+          animate={{ opacity: 1, width: "30rem" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -56,29 +60,31 @@ export const LampContainer = ({
         <div className="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-cyan-500 opacity-50 blur-3xl"></div>
         <motion.div
           initial={{ width: "8rem" }}
-          whileInView={{ width: "16rem" }}
+          animate={{ width: "16rem" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="absolute inset-auto z-30 h-36 w-64 -translate-y-[1.5rem] -translate-x-1/2 left-1/2 rounded-full bg-cyan-400 blur-2xl"
+          className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-cyan-400 blur-2xl"
         ></motion.div>
         <motion.div
           initial={{ width: "15rem" }}
-          whileInView={{ width: "30rem" }}
+          animate={{ width: "30rem" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[1.5rem] -translate-x-1/2 left-1/2 bg-cyan-400 "
+          className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-cyan-400 "
         ></motion.div>
-        <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[8rem] bg-slate-950 "></div>
+        <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-slate-950 "></div>
       </div>
-      <div className="relative z-50 flex -translate-y-40 flex-col items-center px-5">
+      <div className="relative z-50 flex -translate-y-80 flex-col items-center px-5">
         {children}
       </div>
+      {/* Soft fade to transparency - only below the viewport */}
+      <div className="absolute bottom-0 left-0 right-0 h-64 -mb-64 bg-gradient-to-b from-slate-950 to-transparent z-50"></div>
     </div>
   );
 };

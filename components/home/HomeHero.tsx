@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 import { LampContainer } from "@/components/ui/lamp";
 import Link from "next/link";
 import { FlowButton } from "@/components/ui/flow-button";
+import { GlowCard } from "@/components/ui/GlowCard";
 
 export function HomeHero() {
   return (
-    <LampContainer>
+    <LampContainer className="pt-48 md:pt-64">
       <motion.div
         initial={{ opacity: 0.5, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -17,22 +18,19 @@ export function HomeHero() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="flex flex-col items-center"
+        className="flex flex-col items-center mt-48 md:mt-72"
       >
-        {/* Overline */}
-        <p className="text-sm md:text-base font-medium text-slate-400 uppercase tracking-wider mb-6">
-          PromptRank
-        </p>
-
+  
         {/* Main Headline */}
-        <h1 className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl mb-4">
-          ChatGPT App<br />Discoverability
+        <h1 className="bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-center text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight text-transparent mb-6">
+          Make Sure Your<br />
+          ChatGPT App Ranks{" "}
+          <span className="bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text">#1</span>
         </h1>
 
         {/* Subheadline */}
-        <h2 className="bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-center text-2xl md:text-4xl font-medium tracking-tight text-transparent mb-8">
-          Make Sure Your ChatGPT App Ranks{" "}
-          <span className="bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text">#1</span>
+        <h2 className="text-xl md:text-2xl text-slate-400 font-normal tracking-tight mb-8">
+          App Discoverability for ChatGPT
         </h2>
 
         {/* Body Text */}
@@ -52,6 +50,19 @@ export function HomeHero() {
           </Link>
         </div>
       </motion.div>
+
+      {/* Glow Cards Row - Full Width */}
+      <div className="w-full max-w-7xl px-4 grid grid-cols-6 md:grid-cols-12 gap-2 relative z-50 mx-auto">
+        {["stripe.com", "notion.so", "figma.com", "linear.app", "github.com", "vercel.com", "slack.com", "openai.com", "spotify.com", "discord.com", "dropbox.com", "airbnb.com"].map((domain, index) => (
+          <GlowCard key={index} className="p-0" innerClassName="!p-2 border-0 overflow-hidden gap-0">
+            <img 
+              src={`https://img.logo.dev/${domain}?token=pk_F_vYCidPT7-3zDZJ5E1PrQ`} 
+              alt={`${domain} logo`}
+              className="w-full h-full max-w-[100px] mx-auto object-contain rounded-xl"
+            />
+          </GlowCard>
+        ))}
+      </div>
     </LampContainer>
   );
 }
