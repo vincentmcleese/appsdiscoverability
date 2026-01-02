@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "../components/Navbar";
+import { AlertBanner } from "../components/AlertBanner";
 import { Footer } from "../components/Footer";
 import { MainContent } from "../components/MainContent";
 import { neueMontreal } from "./fonts";
@@ -62,7 +63,8 @@ export default function RootLayout({
           `}
         </Script>
         <SmoothScroll>
-          {/* <Navbar /> */}
+          <AlertBanner />
+          <Navbar />
           <MainContent>
             {children}
           </MainContent>

@@ -1,5 +1,5 @@
 import { HomeHero } from "../components/home/HomeHero";
-import { LongFormContent } from "../components/home/LongFormContent";
+import { ScrollContent } from "../components/home/ScrollContent";
 import { InlineCTA } from "../components/home/InlineCTA";
 import { ResourcesSection } from "../components/home/ResourcesSection";
 import { CTASection } from "../components/home/CTASection";
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="w-full">
       <HomeHero />
-      <LongFormContent />
+      <ScrollContent />
       <InlineCTA />
       <ResourcesSection />
       <CTASection />

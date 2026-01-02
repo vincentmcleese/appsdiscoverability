@@ -18,7 +18,7 @@ export function GlowCard({ children, className, innerClassName, variant = "defau
   
   return (
     <div className={cn(
-      "relative rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3",
+      "relative rounded-[1.25rem] border border-border p-2 md:rounded-[1.5rem] md:p-3",
       isGreenHilight && "group transition-transform duration-300 hover:scale-[1.01] hover:border-transparent",
       isGreenDefault && "group transition-transform duration-300 hover:scale-[1.01] border-transparent",
       className
@@ -53,7 +53,7 @@ export function GlowCard({ children, className, innerClassName, variant = "defau
       )}
 
       <div className={cn(
-        "relative flex h-full w-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-[0.75px] bg-background p-6 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] md:p-6",
+        "relative flex h-full w-full flex-col justify-between gap-6 overflow-hidden rounded-xl border bg-background p-6 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] md:p-6",
         innerClassName
       )}>
         {children}
