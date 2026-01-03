@@ -3,17 +3,20 @@
 import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-export function FlowButton({ text = "Modern Button", variant = "default", respondToParent = false }: { text?: string; variant?: "default" | "white"; respondToParent?: boolean }) {
+export function FlowButton({ text = "Modern Button", variant = "default", respondToParent = false }: { text?: string; variant?: "default" | "white" | "secondary"; respondToParent?: boolean }) {
   const isWhite = variant === "white";
+  const isSecondary = variant === "secondary";
   
   return (
     <button className={cn(
       "relative flex items-center gap-1 overflow-hidden rounded-[100px] border-[1.5px] px-8 py-3 text-sm font-semibold cursor-pointer transition-all duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] hover:border-transparent hover:rounded-[12px] active:scale-[0.95]",
       !respondToParent && "group",
       respondToParent && "group-hover/card:border-transparent group-hover/card:rounded-[12px]",
-      isWhite
-        ? "border-white/40 bg-white text-[#111111] hover:text-white group-hover/card:text-white"
-        : "border-[#333333]/40 bg-transparent text-[#111111] hover:text-white group-hover/card:text-white"
+      isSecondary
+        ? "border-white/60 bg-transparent text-white hover:text-white group-hover/card:text-white"
+        : isWhite
+          ? "border-white/40 bg-white text-[#111111] hover:text-white group-hover/card:text-white"
+          : "border-[#333333]/40 bg-transparent text-[#111111] hover:text-white group-hover/card:text-white"
     )}>
       {/* Left arrow (arr-2) */}
       <ArrowRight 
@@ -21,9 +24,11 @@ export function FlowButton({ text = "Modern Button", variant = "default", respon
           "absolute w-4 h-4 left-[-25%] fill-none z-[9] transition-all duration-[800ms] ease-[cubic-bezier(0.34,1.56,0.64,1)]",
           !respondToParent && "group-hover:left-4",
           respondToParent && "group-hover/card:left-4",
-          isWhite 
-            ? "stroke-[#111111] group-hover:stroke-white group-hover/card:stroke-white" 
-            : "stroke-[#111111] group-hover:stroke-white group-hover/card:stroke-white"
+          isSecondary
+            ? "stroke-white group-hover:stroke-white group-hover/card:stroke-white"
+            : isWhite 
+              ? "stroke-[#111111] group-hover:stroke-white group-hover/card:stroke-white" 
+              : "stroke-[#111111] group-hover:stroke-white group-hover/card:stroke-white"
         )}
       />
       {/* Text */}
@@ -47,9 +52,11 @@ export function FlowButton({ text = "Modern Button", variant = "default", respon
           "absolute w-4 h-4 right-4 fill-none z-[9] transition-all duration-[800ms] ease-[cubic-bezier(0.34,1.56,0.64,1)]",
           !respondToParent && "group-hover:right-[-25%]",
           respondToParent && "group-hover/card:right-[-25%]",
-          isWhite 
-            ? "stroke-[#111111] group-hover:stroke-white group-hover/card:stroke-white" 
-            : "stroke-[#111111] group-hover:stroke-white group-hover/card:stroke-white"
+          isSecondary
+            ? "stroke-white group-hover:stroke-white group-hover/card:stroke-white"
+            : isWhite 
+              ? "stroke-[#111111] group-hover:stroke-white group-hover/card:stroke-white" 
+              : "stroke-[#111111] group-hover:stroke-white group-hover/card:stroke-white"
         )}
       />
     </button>

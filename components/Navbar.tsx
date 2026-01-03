@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { FlowButton } from "@/components/ui/flow-button";
 
 export function Navbar() {
   return (
@@ -21,6 +22,13 @@ export function Navbar() {
           <span className="font-bold uppercase bg-gradient-to-r from-[rgb(27,200,140)] to-[rgb(20,160,112)] bg-clip-text text-transparent">APPS</span>
           <span className="font-normal uppercase">Discoverability</span>
         </Link>
+        
+        {/* See Demo Button - Desktop only */}
+        <div className="hidden md:block">
+          <Link href="/demo">
+            <FlowButton text="See Demo" variant="secondary" />
+          </Link>
+        </div>
       </div>
     </nav>
   );

@@ -2,8 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { LampContainer } from "@/components/ui/lamp";
-import { EmailSignup } from "@/components/ui/email-signup";
+import { FlowButton } from "@/components/ui/flow-button";
 import { GlowCard } from "@/components/ui/GlowCard";
 
 export function HomeHero() {
@@ -21,7 +22,7 @@ export function HomeHero() {
       >
   
         {/* Main Headline */}
-        <h1 className="bg-gradient-to-br from-slate-100 to-slate-300 bg-clip-text text-center text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight text-transparent mb-8 md:mb-16">
+        <h1 className="bg-gradient-to-br from-slate-100 to-slate-300 bg-clip-text text-center text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight text-transparent mb-8 md:mb-16 px-2 md:px-4 w-full max-w-4xl">
           Make Sure Your<br />
           ChatGPT App Ranks{" "}
           <span className="bg-gradient-to-r from-[rgb(27,200,140)] to-[rgb(20,160,112)] bg-clip-text">#1</span>
@@ -32,7 +33,7 @@ export function HomeHero() {
           850 million weekly users. Apps appearing at the moment of highest intent. We'll show you exactly where you rank—and help you climb to #1.
         </p>
 
-        {/* Email Signup */}
+        {/* Join Waitlist Button */}
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -43,35 +44,35 @@ export function HomeHero() {
           }}
           className="mb-16 md:mb-24"
         >
-          <EmailSignup />
+          <Link href="/waitlist">
+            <FlowButton text="Join Waitlist" variant="white" />
+          </Link>
         </motion.div>
       </motion.div>
 
       {/* Glow Cards Row - Full Width with Wave Effect */}
-      <div className="w-screen flex justify-center gap-2 md:gap-3 relative z-50 py-8 overflow-hidden">
+      <div className="w-screen flex justify-center gap-0 relative z-50 py-8 overflow-hidden">
         {[
-          "stripe.com", "notion.so", "figma.com", "linear.app", "github.com", 
-          "vercel.com", "slack.com", "openai.com", "spotify.com", "discord.com", 
-          "dropbox.com", "airbnb.com", "shopify.com", "twilio.com", "asana.com"
+          "adobe.com", "spotify.com", "booking.com", "tripadvisor.com", "canva.com", 
+          "target.com", "coursera.org", "notion.so", "zoho.com", "box.com"
         ].map((domain, index, arr) => {
-          // Create wave pattern - sine wave for position
-          const wavePosition = (index / (arr.length - 1)) * Math.PI * 2;
-          const waveOffset = Math.sin(wavePosition) * 16;
-          // Rotation follows the slope (derivative of sine is cosine)
-          const waveRotation = Math.cos(wavePosition) * 6; // ±6 degrees
-          // Fade effect for first and last few icons (desktop only)
-          const distFromEdge = Math.min(index, arr.length - 1 - index);
-          const fadeOpacity = distFromEdge <= 2 ? 0.3 + (distFromEdge * 0.35) : 1;
+          // Pre-computed wave values to avoid hydration mismatch from floating point precision
+          // These are calculated with: Math.round(Math.sin((index / 9) * Math.PI * 2) * 16) and Math.round(Math.cos((index / 9) * Math.PI * 2) * 6)
+          const waveOffsets = [0, 10, 15, 14, 6, -6, -14, -15, -10, 0];
+          const waveRotations = [6, 5, 2, -2, -5, -5, -2, 2, 5, 6];
+          const fadeOpacities = [0.3, 0.65, 1, 1, 1, 1, 1, 1, 0.65, 0.3];
+          
           return (
             <div 
               key={index}
-              className={`${index >= 10 ? 'hidden xl:flex' : ''} ${index >= 8 ? 'hidden lg:flex' : ''} ${index >= 6 ? 'hidden md:flex' : 'flex'}`}
+              className={`p-2 ${index >= 10 ? 'hidden xl:flex' : ''} ${index >= 8 ? 'hidden lg:flex' : ''} ${index >= 6 ? 'hidden md:flex' : 'flex'}`}
               style={{ 
-                transform: `translateY(${waveOffset}px) rotate(${waveRotation}deg)`,
-                opacity: fadeOpacity
+                transform: `translateY(${waveOffsets[index]}px) rotate(${waveRotations[index]}deg)`,
+                opacity: fadeOpacities[index]
               }}
             >
               <GlowCard 
+                variant="simple"
                 className="p-0 aspect-square w-[56px] md:w-[64px] lg:w-[72px]" 
                 innerClassName="!p-0.5 border-0 overflow-hidden gap-0 !bg-slate-900"
               >

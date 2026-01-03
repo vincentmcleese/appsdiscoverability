@@ -48,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${neueMontreal.variable} font-sans antialiased bg-ghost-dark`}
+        className={`${neueMontreal.variable} font-sans antialiased bg-slate-950`}
       >
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}

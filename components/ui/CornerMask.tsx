@@ -8,7 +8,7 @@ export function CornerMask() {
           height="100%"
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
-          className="fill-ghost-dark"
+          className="fill-slate-50"
         >
           <path d="M0 100 L0 0 Q0 100 100 100 L0 100 Z" />
         </svg>
@@ -21,7 +21,7 @@ export function CornerMask() {
           height="100%"
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
-          className="fill-ghost-dark"
+          className="fill-slate-50"
         >
           <path d="M100 100 L100 0 Q100 100 0 100 L100 100 Z" />
         </svg>

@@ -22,14 +22,24 @@ const resources = [
 
 export function ResourcesSection() {
   return (
-    <section className="w-full bg-white py-16 md:py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <section className="relative w-full py-16 md:py-24 overflow-hidden">
+      {/* Subtle grid background */}
+      <div 
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgb(148, 163, 184) 1px, transparent 1px),
+                           linear-gradient(to bottom, rgb(148, 163, 184) 1px, transparent 1px)`,
+          backgroundSize: '40px 40px'
+        }}
+      />
+      
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Header */}
         <div className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-normal tracking-tight text-ghost-text mb-4">
+          <h2 className="text-3xl md:text-4xl font-normal tracking-tight text-slate-100 mb-4">
             Read More
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-slate-400">
             Read more about ChatGPT app discoverability.
           </p>
         </div>
@@ -42,23 +52,26 @@ export function ResourcesSection() {
               href={resource.href}
               className="group block h-full"
             >
-              <GlowCard className="h-full flex flex-col p-6 md:p-8 transition-transform duration-300 hover:scale-[1.02]">
+              <GlowCard 
+                className="h-full flex flex-col p-6 md:p-8 transition-transform duration-300 hover:scale-[1.02]"
+                innerClassName="!bg-slate-950"
+              >
                 <div className="mb-4">
                   <Pill 
                     label={resource.label}
-                    variant={resource.label === "Guide" ? "brand" : "black"}
+                    variant="brand"
                   />
                 </div>
                 
-                <h3 className="text-xl md:text-2xl font-normal text-ghost-text mb-3 group-hover:text-ghost-dark transition-colors">
+                <h3 className="text-xl md:text-2xl font-normal text-slate-100 mb-3 group-hover:text-[rgb(27,200,140)] transition-colors">
                   {resource.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
+                <p className="text-slate-400 leading-relaxed mb-6 flex-grow">
                   {resource.description}
                 </p>
                 
-                <div className="flex items-center text-ghost-dark group-hover:text-brand-gradient transition-colors">
+                <div className="flex items-center text-[rgb(27,200,140)] group-hover:text-[rgb(20,160,112)] transition-colors">
                   <span className="mr-2 font-medium">Learn More</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </div>
@@ -70,4 +83,3 @@ export function ResourcesSection() {
     </section>
   );
 }
-

@@ -57,13 +57,13 @@ export function EmailSignup() {
             setError('');
           }}
           placeholder="Enter your email"
-          className="px-4 py-2 bg-transparent text-slate-800 placeholder:text-slate-400 focus:outline-none w-[200px] md:w-[280px]"
+          className="px-4 py-2.5 bg-transparent text-slate-800 placeholder:text-slate-400 focus:outline-none w-[180px] sm:w-[220px] md:w-[280px]"
         />
         <button
           type="submit"
           disabled={isLoading}
           className={cn(
-            "group relative flex items-center gap-1 overflow-hidden rounded-full px-6 py-2.5 text-sm font-semibold cursor-pointer transition-all duration-300",
+            "group relative flex items-center gap-1 overflow-hidden rounded-full px-4 sm:px-6 py-2.5 text-sm font-semibold cursor-pointer transition-all duration-300 whitespace-nowrap",
             "bg-brand-gradient text-white hover:opacity-90 active:scale-[0.97]",
             isLoading && "opacity-70 cursor-not-allowed"
           )}
@@ -82,4 +82,5 @@ export function EmailSignup() {
     </form>
   );
 }
+
 

@@ -12,7 +12,7 @@ const ScrollContent = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end 60%"]
+    offset: ["start start", "end end"]
   });
 
   const value = useTransform(scrollYProgress, [0, 1], [100, 0]);
@@ -23,13 +23,13 @@ const ScrollContent = () => {
   const y = useTransform(scrollYProgress, [0, 1], [0, 240]);
 
   return (
-    <div ref={containerRef} className="relative min-h-screen w-full bg-slate-950">
+    <div ref={containerRef} className="relative min-h-screen w-full">
       {/* Continuation of hero's radial gradient - fades out as you scroll */}
       <div className="absolute top-0 left-0 right-0 h-[100vh] bg-[radial-gradient(ellipse_1400px_1200px_at_top_left,_var(--tw-gradient-stops))] from-emerald-900/30 via-emerald-950/15 via-50% to-transparent pointer-events-none"></div>
       <div className="absolute top-0 left-0 right-0 h-[100vh] bg-[radial-gradient(ellipse_1400px_1200px_at_top_right,_var(--tw-gradient-stops))] from-emerald-900/30 via-emerald-950/15 via-50% to-transparent pointer-events-none"></div>
       
       {/* Centered container with max-w-3xl */}
-      <div className="mx-auto max-w-3xl px-6 flex items-start pt-[calc(50vh-120px)]">
+      <div className="mx-auto max-w-3xl px-6 flex items-start pt-16 md:pt-24">
         {/* Scroll Indicator */}
         <div className="z-4 bg-slate-800 sticky top-[calc(50%-120px)] flex h-60 w-1.5 flex-col items-center justify-center gap-2 rounded-2xl mr-8 md:mr-12 shrink-0">
           <motion.div
@@ -38,9 +38,9 @@ const ScrollContent = () => {
           ></motion.div>
           <motion.div
             style={{ y }}
-            className="absolute top-0 flex h-px w-4 items-center justify-center bg-[rgb(27,200,140)] text-sm font-medium tracking-tight text-[rgb(27,200,140)]"
+            className="absolute top-0 flex h-px w-4 items-center justify-center bg-[rgb(27,200,140)] text-[10px] md:text-sm font-medium tracking-tight text-[rgb(27,200,140)]"
           >
-            <motion.span className="absolute left-6 tabular-nums">
+            <motion.span className="absolute left-4 md:left-6 tabular-nums">
               {useTransform(progressValue, (v) => Math.round(v))}
             </motion.span>
           </motion.div>
@@ -56,7 +56,7 @@ export { ScrollContent };
 
 function Content() {
   return (
-    <article className="flex-1 space-y-[22vh] pb-[40vh] text-slate-300">
+    <article className="flex-1 space-y-[22vh] text-slate-300">
       <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-100 leading-tight text-center">
         <span className="text-[rgb(27,200,140)]">850 million</span> people use ChatGPT every week
       </h2>

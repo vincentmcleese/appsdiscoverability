@@ -8,22 +8,24 @@ export interface GlowCardProps {
   children: React.ReactNode;
   className?: string;
   innerClassName?: string;
-  variant?: "default" | "green-hilight" | "green-default";
+  variant?: "default" | "green-hilight" | "green-default" | "simple";
 }
 
 export function GlowCard({ children, className, innerClassName, variant = "default" }: GlowCardProps) {
   const isGreenHilight = variant === "green-hilight";
   const isGreenDefault = variant === "green-default";
+  const isSimple = variant === "simple";
   const hasCustomBorder = isGreenHilight || isGreenDefault;
   
   return (
     <div className={cn(
-      "relative rounded-[1.25rem] border border-border p-2 md:rounded-[1.5rem] md:p-3",
+      "relative border p-2 md:p-3",
+      isSimple ? "rounded-xl border-slate-700/50 p-1" : "rounded-[1.25rem] border-border md:rounded-[1.5rem]",
       isGreenHilight && "group transition-transform duration-300 hover:scale-[1.01] hover:border-transparent",
       isGreenDefault && "group transition-transform duration-300 hover:scale-[1.01] border-transparent",
       className
     )}>
-      {!hasCustomBorder && (
+      {!hasCustomBorder && !isSimple && (
         <GlowingEffect
           spread={40}
           glow={true}
