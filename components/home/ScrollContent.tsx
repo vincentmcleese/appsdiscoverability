@@ -58,78 +58,35 @@ function Content() {
   return (
     <article className="flex-1 space-y-[22vh] text-slate-300">
       <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-100 leading-tight text-center">
-        <span className="text-[rgb(27,200,140)]">850 million</span> people use ChatGPT every week
+        <span className="text-[rgb(27,200,140)]">850 million</span> people use ChatGPT every week,
       </h2>
 
-      <div className="max-w-xl mx-auto">
-        <span className="text-sm uppercase tracking-widest text-slate-500 font-medium">100X THE IOS APP STORE</span>
-        <p className="text-2xl leading-relaxed mt-3">
-          In 2007, <span className="font-bold text-[rgb(27,200,140)]">6 million iPhones</span> were sold. 
-          Today, <span className="font-bold text-[rgb(27,200,140)]">850 million people</span> use ChatGPT every week. 
-          We're witnessing a platform shift that happens once in a generation.
-          <svg
-            className="inline-block w-6 h-6 ml-2 -mt-1 text-white"
-            fill="currentColor"
-            viewBox="0 0 384 512"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
-          </svg>
-        </p>
-      </div>
-
-      <div className="max-w-xl mx-auto">
-        <span className="text-sm uppercase tracking-widest text-slate-500 font-medium">THE NEW GOOGLE</span>
-        <p className="text-2xl leading-relaxed mt-3">
-          LLMs are becoming the <span className="font-bold text-[rgb(27,200,140)]">primary interface</span> for how people 
-          interact with software. Instead of searching Google, downloading apps, and learning new UIs—users simply 
-          describe what they need, and the AI figures out which tool to use.
-          <svg
-            className="inline-block w-6 h-6 ml-2 -mt-1 text-white"
-            fill="currentColor"
-            viewBox="0 0 488 512"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
-          </svg>
-        </p>
-      </div>
-
-      <div className="max-w-xl mx-auto">
-        <span className="text-sm uppercase tracking-widest text-slate-500 font-medium">A NEW PARADIGM</span>
-        <p className="text-2xl leading-relaxed mt-3">
-          This creates an entirely new <span className="font-bold text-[rgb(27,200,140)]">discoverability bottleneck</span>. 
-          Your app might be the best in its category, but if ChatGPT doesn't recommend it at the right moment, 
-          users will never know you exist.
-        </p>
-      </div>
-
-      <div className="max-w-xl mx-auto">
-        <span className="text-sm uppercase tracking-widest text-slate-500 font-medium">HOW TO WIN</span>
-        <p className="text-2xl leading-relaxed mt-3">
-          Traditional SEO and App Store Optimization are becoming less relevant. The new game is 
-          <span className="font-bold text-[rgb(27,200,140)]"> LLM optimization</span>—understanding how AI models 
-          decide which apps to surface, and positioning your product to win those recommendations.
-        </p>
-      </div>
-
-      <div className="max-w-xl mx-auto">
-        <span className="text-sm uppercase tracking-widest text-slate-500 font-medium">THE OPPORTUNITY IS NOW</span>
-        <p className="text-2xl leading-relaxed mt-3">
-          The teams that understand this shift first will <span className="font-bold text-[rgb(27,200,140)]">own their categories</span>. 
-          The window to establish dominance is open now, but it won't stay open forever.
-        </p>
-      </div>
-
       <p className="text-2xl leading-relaxed max-w-xl mx-auto">
-        Apps appearing at the <span className="font-bold text-[rgb(27,200,140)]">moment of highest intent</span>—when 
-        a user is actively describing their problem—convert at rates traditional marketing can only dream of.
+        that's more than 10% of the global population. For context, when Apple launched the App Store in 2009, there were just <span className="font-bold text-[rgb(27,200,140)]">6 million iPhones</span> in distribution. OpenAI just released the Apps SDK - the opportunity to build inside ChatGPT is enormous, and companies are already rushing to do it.
       </p>
 
       <p className="text-2xl leading-relaxed max-w-xl mx-auto">
-        The competition isn't sitting still. Every day you wait, your competitors are learning the new rules 
-        and climbing the rankings. <span className="font-bold text-[rgb(27,200,140)]">First-mover advantage</span> in 
-        LLM discoverability could define the next decade of your business.
+        And this is only the beginning. More of our digital activity is moving inside LLMs - searching, creating, planning, working. Building apps inside ChatGPT, or having your brand present there, isn't a nice-to-have anymore. It's where your users are heading - and it's quickly becoming a <span className="font-bold text-[rgb(27,200,140)]">customer expectation</span>. The apps that are present will be the ones that get used, capturing an increasing share of attention over time.
+      </p>
+
+      <p className="text-2xl leading-relaxed max-w-xl mx-auto">
+        Just like with Apple's Mobile App Store, building great applications will be critical. But a great app is nothing without discoverability. As the ecosystem fills with apps, it will become your <span className="font-bold text-[rgb(27,200,140)]">single biggest bottleneck</span> to growth. The teams that crack it will be the ones that succeed.
+      </p>
+
+      <p className="text-2xl leading-relaxed max-w-xl mx-auto">
+        In ChatGPT, discoverability starts with the App Store - and it's already live. Just like the Apple App Store, the apps that rank for <span className="font-bold text-[rgb(27,200,140)]">high-volume keywords</span> get the traffic. You need to make sure you're found there. Optimizing your metadata, descriptions, and positioning will matter.
+      </p>
+
+      <p className="text-2xl leading-relaxed max-w-xl mx-auto">
+        But on top of that, there's a whole new paradigm: <span className="font-bold text-[rgb(27,200,140)]">organic recommendations</span>. When someone is planning a trip and asks ChatGPT to help organize their itinerary, an app can appear right below the response - at the moment of highest intent. No search. No browsing. Users simply continue their journey with that app. This is distribution that's never existed before.
+      </p>
+
+      <p className="text-2xl leading-relaxed max-w-xl mx-auto">
+        As more apps flood in, the question becomes urgent: when a user asks for help, which app appears below the response? Which one ranks first in the store for the keywords that matter? The teams that understand discoverability - and <span className="font-bold text-[rgb(27,200,140)]">own the high-volume keywords and prompts</span> in their category - will win. The rest will be invisible.
+      </p>
+
+      <p className="text-2xl leading-relaxed max-w-xl mx-auto">
+        That's why we're building <span className="font-bold text-[rgb(27,200,140)]">PromptRank</span>. We track store search and organic recommendations - for you and your competitors. We show you where you're winning, where you're losing, and what it takes to climb. Then we help you get to #1.
       </p>
     </article>
   );

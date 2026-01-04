@@ -15,7 +15,7 @@ interface CTASectionProps {
 
 export function CTASection({ 
   variant = "default",
-  title = "The race for visibility has already begun.",
+  title = "The race for ChatGPT App visibility has already begun.",
   subtitle = "The teams that understand discoverability first will own their categories.",
   buttonText = "Start Today",
   buttonHref = "/waitlist"
