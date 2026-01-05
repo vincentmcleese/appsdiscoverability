@@ -32,7 +32,7 @@ export default function BookACallPage() {
         {/* Tally Embed Form in Card */}
         <div className="w-full max-w-2xl bg-white rounded-2xl p-8 md:p-12 shadow-xl">
           <iframe 
-            data-tally-src="https://tally.so/embed/ja6GbJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+            data-tally-src="https://tally.so/embed/ja6904?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
             loading="lazy" 
             width="100%" 
             height="214" 
