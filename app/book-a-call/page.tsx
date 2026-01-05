@@ -1,8 +1,8 @@
 import Script from "next/script";
 
 export const metadata = {
-  title: "Book a Demo - Appsdiscoverability.com",
-  description: "Schedule a demo to see how Appsdiscoverability.com can help your ChatGPT app rank #1.",
+  title: "Book a Demo - Appdiscoverability.com",
+  description: "Schedule a demo to see how Appdiscoverability.com can help your ChatGPT app rank #1.",
 };
 
 export default function BookACallPage() {
@@ -28,7 +28,7 @@ export default function BookACallPage() {
             frameBorder="0" 
             marginHeight={0} 
             marginWidth={0} 
-            title="appsdiscoverability waitlist"
+            title="appdiscoverability waitlist"
           />
         </div>
       </div>

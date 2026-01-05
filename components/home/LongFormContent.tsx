@@ -32,7 +32,7 @@ export function LongFormContent() {
           </p>
 
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            That's why we're building Appsdiscoverability.com. We track where your app ranks across both the store and organic recommendations. We show you which keywords and prompts your competitors are winning. And we give you specific actions to climb - so you're not just building a great app, but making sure it gets found.
+            That's why we're building Appdiscoverability.com. We track where your app ranks across both the store and organic recommendations. We show you which keywords and prompts your competitors are winning. And we give you specific actions to climb - so you're not just building a great app, but making sure it gets found.
           </p>
         </div>
       </div>

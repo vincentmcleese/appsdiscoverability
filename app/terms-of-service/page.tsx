@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { ContentScroll, ScrollSection } from "@/components/ui/content-scroll";
 
 export const metadata = {
-  title: "Terms of Service - Appsdiscoverability.com",
+  title: "Terms of Service - Appdiscoverability.com",
   description: "Read our Terms of Service. Last updated: December 30, 2025",
 };
 

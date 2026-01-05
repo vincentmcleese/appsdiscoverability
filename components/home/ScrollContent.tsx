@@ -86,7 +86,7 @@ function Content() {
       </p>
 
       <p className="text-2xl leading-relaxed max-w-xl mx-auto">
-        That's why we're building <span className="font-bold text-[rgb(27,200,140)]">Appsdiscoverability.com</span>. We track store search and organic recommendations - for you and your competitors. We show you where you're winning, where you're losing, and what it takes to climb. Then we help you get to #1.
+        That's why we're building <span className="font-bold text-[rgb(27,200,140)]">Appdiscoverability.com</span>. We track store search and organic recommendations - for you and your competitors. We show you where you're winning, where you're losing, and what it takes to climb. Then we help you get to #1.
       </p>
     </article>
   );

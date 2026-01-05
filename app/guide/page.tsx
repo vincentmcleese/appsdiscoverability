@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { ContentScroll, ScrollSection } from "@/components/ui/content-scroll";
 
 export const metadata = {
-  title: "The Complete Guide to ChatGPT App Discoverability - Appsdiscoverability.com",
+  title: "The Complete Guide to ChatGPT App Discoverability - Appdiscoverability.com",
   description: "A practical playbook for getting your ChatGPT app found—grounded in official documentation and real-world testing.",
 };
 

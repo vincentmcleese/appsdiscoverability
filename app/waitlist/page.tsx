@@ -1,8 +1,8 @@
 import Script from "next/script";
 
 export const metadata = {
-  title: "Join the Waitlist - Appsdiscoverability.com",
-  description: "Be the first to know when Appsdiscoverability.com launches. Join our waitlist today.",
+  title: "Join the Waitlist - Appdiscoverability.com",
+  description: "Be the first to know when Appdiscoverability.com launches. Join our waitlist today.",
 };
 
 export default function WaitlistPage() {

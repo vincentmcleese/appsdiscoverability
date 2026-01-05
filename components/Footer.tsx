@@ -57,7 +57,7 @@ export function Footer() {
           {/* Brand Section - Left */}
           <div>
             <h3 className="text-xl font-normal mb-4 flex items-center gap-1.5">
-              <span className="font-bold uppercase bg-gradient-to-r from-[rgb(27,200,140)] to-[rgb(20,160,112)] bg-clip-text text-transparent">APPS</span>
+              <span className="font-bold uppercase bg-gradient-to-r from-[rgb(27,200,140)] to-[rgb(20,160,112)] bg-clip-text text-transparent">APP</span>
               <span className="font-bold uppercase text-slate-900">Discoverability</span>
               <span className="font-bold uppercase bg-gradient-to-r from-[rgb(27,200,140)] to-[rgb(20,160,112)] bg-clip-text text-transparent">.COM</span>
             </h3>
