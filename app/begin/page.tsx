@@ -1,16 +1,27 @@
-import Script from "next/script";
+"use client";
 
-export const metadata = {
-  title: "Join the Waitlist - Appdiscoverability.com",
-  description: "Be the first to know when Appdiscoverability.com launches. Join our waitlist today.",
-};
+import Script from "next/script";
+import { useEffect } from "react";
 
 export default function BeginPage() {
+  useEffect(() => {
+    // Re-initialize Tally embeds when component mounts
+    if (typeof window !== "undefined" && (window as any).Tally) {
+      (window as any).Tally.loadEmbeds();
+    }
+  }, []);
+
   return (
     <>
       <Script
         src="https://tally.so/widgets/embed.js"
         strategy="afterInteractive"
+        onLoad={() => {
+          // Initialize Tally when script loads
+          if ((window as any).Tally) {
+            (window as any).Tally.loadEmbeds();
+          }
+        }}
       />
       
       <div className="min-h-screen bg-slate-950 flex flex-col items-center px-6 pt-24 pb-8">
@@ -35,4 +46,3 @@ export default function BeginPage() {
     </>
   );
 }
-

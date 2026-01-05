@@ -1,16 +1,27 @@
-import Script from "next/script";
+"use client";
 
-export const metadata = {
-  title: "Book a Demo - Appdiscoverability.com",
-  description: "Schedule a demo to see how Appdiscoverability.com can help your ChatGPT app rank #1.",
-};
+import Script from "next/script";
+import { useEffect } from "react";
 
 export default function BookACallPage() {
+  useEffect(() => {
+    // Re-initialize Tally embeds when component mounts
+    if (typeof window !== "undefined" && (window as any).Tally) {
+      (window as any).Tally.loadEmbeds();
+    }
+  }, []);
+
   return (
     <>
       <Script
         src="https://tally.so/widgets/embed.js"
         strategy="afterInteractive"
+        onLoad={() => {
+          // Initialize Tally when script loads
+          if ((window as any).Tally) {
+            (window as any).Tally.loadEmbeds();
+          }
+        }}
       />
       
       <div className="min-h-screen bg-slate-950 flex flex-col items-center px-6 pt-24 pb-8">
@@ -21,7 +32,7 @@ export default function BookACallPage() {
         {/* Tally Embed Form in Card */}
         <div className="w-full max-w-2xl bg-white rounded-2xl p-8 md:p-12 shadow-xl">
           <iframe 
-            data-tally-src="https://tally.so/embed/ja6904?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+            data-tally-src="https://tally.so/embed/ja6GbJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
             loading="lazy" 
             width="100%" 
             height="214" 
@@ -35,4 +46,3 @@ export default function BookACallPage() {
     </>
   );
 }
-
