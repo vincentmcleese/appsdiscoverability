@@ -13,6 +13,7 @@ export type ScrollSection = {
 type ContentScrollProps = {
   sections: ScrollSection[];
   className?: string;
+  theme?: 'light' | 'dark';
 };
 
 const Section = ({
@@ -48,18 +49,27 @@ const Section = ({
 export const ContentScroll = ({
   sections,
   className,
+  theme = 'light',
 }: ContentScrollProps) => {
   const [activeSection, setActiveSection] = useState(0);
+
+  const isDark = theme === 'dark';
 
   return (
     <div className={cn("flex flex-col lg:flex-row gap-12", className)}>
       {/* Sidebar Navigation - Sticky on Desktop */}
       <div className="lg:w-1/4">
         <div className="sticky top-32 hidden lg:block">
-          <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-6">
+          <h4 className={cn(
+            "text-sm font-semibold uppercase tracking-wider mb-6",
+            isDark ? "text-slate-400" : "text-gray-900"
+          )}>
             Contents
           </h4>
-          <ul className="space-y-4 border-l border-gray-200">
+          <ul className={cn(
+            "space-y-4 border-l",
+            isDark ? "border-slate-700" : "border-gray-200"
+          )}>
             {sections.map((section, index) => (
               <li className="relative cursor-pointer pl-4" key={section.id}>
                 <a
@@ -86,7 +96,9 @@ export const ContentScroll = ({
                   <p
                     className={cn(
                       "text-sm font-medium transition-colors duration-200",
-                      activeSection === index ? "text-gray-900" : "text-gray-500 hover:text-gray-700"
+                      activeSection === index
+                        ? isDark ? "text-slate-100" : "text-gray-900"
+                        : isDark ? "text-slate-500 hover:text-slate-300" : "text-gray-500 hover:text-gray-700"
                     )}
                   >
                     {section.title}
@@ -107,11 +119,17 @@ export const ContentScroll = ({
             index={index}
             setActiveSection={setActiveSection}
           >
-            <h2 className="text-lg md:text-xl font-normal text-gray-900 tracking-wider mb-6 relative inline-block">
+            <h2 className={cn(
+              "text-lg md:text-xl font-normal tracking-wider mb-6 relative inline-block",
+              isDark ? "text-slate-100" : "text-gray-900"
+            )}>
               {section.title}
               <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-brand-gradient"></span>
             </h2>
-            <div className="text-sm text-gray-600 leading-relaxed min-w-0 w-full">
+            <div className={cn(
+              "text-sm leading-relaxed min-w-0 w-full",
+              isDark ? "text-slate-300" : "text-gray-600"
+            )}>
               {section.content}
             </div>
           </Section>

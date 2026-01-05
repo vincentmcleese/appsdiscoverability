@@ -58,7 +58,8 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-normal mb-4 flex items-center gap-1.5">
               <span className="font-bold uppercase bg-gradient-to-r from-[rgb(27,200,140)] to-[rgb(20,160,112)] bg-clip-text text-transparent">APPS</span>
-              <span className="font-normal uppercase text-slate-900">Discoverability</span>
+              <span className="font-bold uppercase text-slate-900">Discoverability</span>
+              <span className="font-bold uppercase bg-gradient-to-r from-[rgb(27,200,140)] to-[rgb(20,160,112)] bg-clip-text text-transparent">.COM</span>
             </h3>
             <p className="text-slate-600 text-sm max-w-sm leading-relaxed">
               850 million weekly users. Apps appearing at the moment of highest intent. We'll show you exactly where you rank—and help you climb to #1.

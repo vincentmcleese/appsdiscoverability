@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { ContentScroll, ScrollSection } from "@/components/ui/content-scroll";
 
 export const metadata = {
-  title: "Privacy Policy - PromptRank",
+  title: "Privacy Policy - Appsdiscoverability.com",
   description: "Read our Privacy Policy. Last updated: December 30, 2025",
 };
 

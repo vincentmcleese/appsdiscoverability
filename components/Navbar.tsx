@@ -23,8 +23,11 @@ export function Navbar() {
               className="object-contain"
             />
           </div>
-          <span className="font-bold uppercase bg-gradient-to-r from-[rgb(27,200,140)] to-[rgb(20,160,112)] bg-clip-text text-transparent">APPS</span>
-          <span className="font-normal uppercase">Discoverability</span>
+          <span className="flex items-center">
+            <span className="font-bold uppercase bg-gradient-to-r from-[rgb(27,200,140)] to-[rgb(20,160,112)] bg-clip-text text-transparent mr-1">APPS</span>
+            <span className="font-bold uppercase">DISCOVERABILITY</span>
+            <span className="font-bold uppercase bg-gradient-to-r from-[rgb(27,200,140)] to-[rgb(20,160,112)] bg-clip-text text-transparent">.COM</span>
+          </span>
         </Link>
         
         {/* Desktop - See Demo Button */}

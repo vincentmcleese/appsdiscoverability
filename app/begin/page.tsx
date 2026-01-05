@@ -1,8 +1,8 @@
 import Script from "next/script";
 
 export const metadata = {
-  title: "Join the Waitlist - PromptRank",
-  description: "Be the first to know when PromptRank launches. Join our waitlist today.",
+  title: "Join the Waitlist - Appsdiscoverability.com",
+  description: "Be the first to know when Appsdiscoverability.com launches. Join our waitlist today.",
 };
 
 export default function BeginPage() {
@@ -21,7 +21,7 @@ export default function BeginPage() {
         {/* Tally Embed Form in Card */}
         <div className="w-full max-w-2xl bg-white rounded-2xl p-8 md:p-12 shadow-xl">
           <iframe 
-            data-tally-src="https://tally.so/embed/ja6904?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+            data-tally-src="https://tally.so/embed/ja6GbJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
             loading="lazy" 
             width="100%" 
             height="214" 

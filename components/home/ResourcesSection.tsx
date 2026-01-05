@@ -11,12 +11,6 @@ const resources = [
     title: "The Complete Guide to ChatGPT App Discoverability",
     description: "Metadata structure, tool naming, prompt optimization, and the algorithm signals that determine which apps appear in conversations.",
     href: "/guide"
-  },
-  {
-    label: "Thesis",
-    title: "Building Apps in ChatGPT: How to Win on the Next Billion-User Platform",
-    description: "The four phases of platform distribution. Why you can't opt out. And how to play smart while the window is open.",
-    href: "/thesis"
   }
 ];
 
@@ -45,7 +39,7 @@ export function ResourcesSection() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="max-w-2xl mx-auto">
           {resources.map((resource) => (
             <Link
               key={resource.href}

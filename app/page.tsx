@@ -5,7 +5,7 @@ import { ResourcesSection } from "../components/home/ResourcesSection";
 import { CTASection } from "../components/home/CTASection";
 
 export const metadata = {
-  title: "PromptRank - ChatGPT App Discoverability",
+  title: "Appsdiscoverability.com - ChatGPT App Discoverability",
   description: "Make Sure Your ChatGPT App Ranks #1. 850 million weekly users. We'll show you exactly where you rank—and help you climb to #1.",
 };
 

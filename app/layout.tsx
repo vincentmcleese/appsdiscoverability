@@ -12,7 +12,7 @@ const GA_MEASUREMENT_ID = "G-BVX33VY3NJ";
 
 
 export const metadata: Metadata = {
-  title: "PromptRank - ChatGPT App Discoverability",
+  title: "Appsdiscoverability.com - ChatGPT App Discoverability",
   description: "Make Sure Your ChatGPT App Ranks #1. 850 million weekly users. We'll show you exactly where you rank—and help you climb to #1.",
   icons: {
     icon: "/ghosts/speedyghost.png",
@@ -20,21 +20,21 @@ export const metadata: Metadata = {
     apple: "/ghosts/speedyghost.png",
   },
   openGraph: {
-    title: "PromptRank - ChatGPT App Discoverability",
+    title: "Appsdiscoverability.com - ChatGPT App Discoverability",
     description: "Make Sure Your ChatGPT App Ranks #1. 850 million weekly users. We'll show you exactly where you rank—and help you climb to #1.",
     images: [
       {
         url: '/images/OGshare.png',
         width: 1200,
         height: 630,
-        alt: 'PromptRank - ChatGPT App Discoverability',
+        alt: 'Appsdiscoverability.com - ChatGPT App Discoverability',
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "PromptRank - ChatGPT App Discoverability",
+    title: "Appsdiscoverability.com - ChatGPT App Discoverability",
     description: "Make Sure Your ChatGPT App Ranks #1. 850 million weekly users. We'll show you exactly where you rank—and help you climb to #1.",
     images: ['/images/OGshare.png'],
   },
