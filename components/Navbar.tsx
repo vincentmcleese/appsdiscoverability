@@ -3,8 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FlowButton } from "@/components/ui/flow-button";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <nav 
       className="fixed top-10 left-0 right-0 z-50 h-16 bg-slate-950 border-b border-slate-800"
@@ -23,13 +27,37 @@ export function Navbar() {
           <span className="font-normal uppercase">Discoverability</span>
         </Link>
         
-        {/* See Demo Button - Desktop only */}
+        {/* Desktop - See Demo Button */}
         <div className="hidden md:block">
-          <Link href="/demo">
+          <Link href="/book-a-call">
             <FlowButton text="See Demo" variant="secondary" />
           </Link>
         </div>
+
+        {/* Mobile - Hamburger Menu */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden text-slate-100 p-2 hover:bg-slate-800 rounded-lg transition-colors"
+          aria-label="Toggle menu"
+        >
+          {isMobileMenuOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <Menu className="w-6 h-6" />
+          )}
+        </button>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-16 left-0 right-0 bg-slate-950 border-b border-slate-800 shadow-xl">
+          <div className="px-4 py-6">
+            <Link href="/book-a-call" onClick={() => setIsMobileMenuOpen(false)}>
+              <FlowButton text="See Demo" variant="secondary" />
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

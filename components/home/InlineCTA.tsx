@@ -87,7 +87,7 @@ export function InlineCTA() {
         
         {/* Join Waitlist Button */}
         <div className="flex justify-center">
-          <Link href="/waitlist">
+          <Link href="/begin">
             <FlowButton text="Join Waitlist" variant="white" />
           </Link>
         </div>

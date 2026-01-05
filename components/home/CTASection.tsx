@@ -18,7 +18,7 @@ export function CTASection({
   title = "The race for ChatGPT App visibility has already begun.",
   subtitle = "The teams that understand discoverability first will own their categories.",
   buttonText = "Start Today",
-  buttonHref = "/waitlist"
+  buttonHref = "/begin"
 }: CTASectionProps) {
   const [isMobile, setIsMobile] = useState(false);
   const isDark = variant === "dark";

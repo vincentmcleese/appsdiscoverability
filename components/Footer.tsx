@@ -94,7 +94,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-slate-200 text-center text-slate-500 text-xs">
-          &copy; {new Date().getFullYear()} APPS Discoverability. All rights reserved.
+          &copy; 2026 Ghost Team LLC All Rights Reserved
         </div>
       </div>
     </footer>

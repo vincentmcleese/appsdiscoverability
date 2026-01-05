@@ -15,7 +15,7 @@ export default function WaitlistPage() {
         strategy="afterInteractive"
       />
       
-      <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center px-6 py-24">
+      <div className="min-h-screen bg-slate-950 flex flex-col items-center px-6 pt-24 pb-8">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-100 text-center mb-12">
           Join the <span className="text-[rgb(27,200,140)]">Waitlist</span>
         </h1>
