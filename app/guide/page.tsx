@@ -27,7 +27,7 @@ const sections: ScrollSection[] = [
     content: (
       <div className={proseClasses}>
         <p>You built a great ChatGPT app. It works perfectly. Users love it when they find it.</p>
-        <p>But <strong>if users can't find your app, it may as well not exist.</strong></p>
+        <p>But <strong>discoverability determines success.</strong> It's like making sure you rank on Google - you only get results if users find you first.</p>
 
         <h3>Why Discoverability is the Bottleneck</h3>
         <p>ChatGPT has +850 million weekly active users. The App Store is live and growing. But unlike the early days of the iPhone App Store - where getting in early meant automatic visibility - ChatGPT apps don't get discovered by accident. There's no "new releases" section (yet) that guarantees eyeballs.</p>
