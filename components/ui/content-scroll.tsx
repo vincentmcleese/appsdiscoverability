@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { cn } from "@/lib/utils";
 
 export type ScrollSection = {
@@ -16,44 +16,61 @@ type ContentScrollProps = {
   theme?: 'light' | 'dark';
 };
 
-const Section = ({
-  section,
-  index,
-  children,
-  setActiveSection,
-}: {
-  section: ScrollSection;
-  index: number;
-  children: React.ReactNode;
-  setActiveSection: (index: number) => void;
-}) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, {
-    amount: 0.3,
-    margin: "-100px 0px -50% 0px",
-  });
-
-  useEffect(() => {
-    if (isInView) {
-      setActiveSection(index);
-    }
-  }, [isInView, index, setActiveSection]);
-
-  return (
-    <div ref={ref} id={section.id} className="space-y-4 md:space-y-6 scroll-mt-32">
-      {children}
-    </div>
-  );
-};
-
 export const ContentScroll = ({
   sections,
   className,
   theme = 'light',
 }: ContentScrollProps) => {
   const [activeSection, setActiveSection] = useState(0);
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const isDark = theme === 'dark';
+
+  // Calculate which section should be active based on scroll position
+  const updateActiveSection = useCallback(() => {
+    const scrollTop = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    // Detection point: 25% down from top of viewport
+    const detectionPoint = scrollTop + viewportHeight * 0.25;
+
+    let newActiveIndex = 0;
+
+    for (let i = 0; i < sectionRefs.current.length; i++) {
+      const section = sectionRefs.current[i];
+      if (!section) continue;
+
+      const rect = section.getBoundingClientRect();
+      const sectionTop = scrollTop + rect.top;
+      const sectionBottom = sectionTop + rect.height;
+
+      // If the detection point is within this section, it's active
+      if (detectionPoint >= sectionTop && detectionPoint < sectionBottom) {
+        newActiveIndex = i;
+        break;
+      }
+      // If we've scrolled past this section, it could be the active one
+      // (handles case where detection point is between sections)
+      if (detectionPoint >= sectionTop) {
+        newActiveIndex = i;
+      }
+    }
+
+    setActiveSection(newActiveIndex);
+  }, []);
+
+  useEffect(() => {
+    // Initial check
+    updateActiveSection();
+
+    // Listen for scroll
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    window.addEventListener('resize', updateActiveSection, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', updateActiveSection);
+      window.removeEventListener('resize', updateActiveSection);
+    };
+  }, [updateActiveSection]);
 
   return (
     <div className={cn("flex flex-col lg:flex-row gap-12", className)}>
@@ -77,7 +94,6 @@ export const ContentScroll = ({
                   onClick={(e) => {
                     e.preventDefault();
                     document.getElementById(section.id)?.scrollIntoView({ behavior: "smooth" });
-                    setActiveSection(index);
                   }}
                   className="block py-1"
                 >
@@ -113,11 +129,11 @@ export const ContentScroll = ({
       {/* Content Area */}
       <div className="flex-1 flex flex-col gap-16 md:gap-24 min-w-0">
         {sections.map((section, index) => (
-          <Section
+          <div
             key={section.id}
-            section={section}
-            index={index}
-            setActiveSection={setActiveSection}
+            ref={(el) => { sectionRefs.current[index] = el; }}
+            id={section.id}
+            className="space-y-4 md:space-y-6 scroll-mt-32"
           >
             <h2 className={cn(
               "text-lg md:text-xl font-normal tracking-wider mb-6 relative inline-block",
@@ -132,7 +148,7 @@ export const ContentScroll = ({
             )}>
               {section.content}
             </div>
-          </Section>
+          </div>
         ))}
       </div>
     </div>
