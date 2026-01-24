@@ -339,9 +339,10 @@ const sections: ScrollSection[] = [
           <li><strong>Schedule periodic prompt replays</strong> - especially after adding new tools or changing structured fields.</li>
         </ul>
 
-        <h3>Option 2: Automate with AppDiscoverability.com</h3>
+        <h3>Option 2: Automate with <a href="/begin">appdiscoverability.com</a></h3>
         <p>The DIY approach works, but it's manual and time-consuming. Every metadata change requires re-running your golden prompt set, logging results, and iterating again.</p>
-        <p>AppDiscoverability.com automates this entire loop. We run your prompts, track precision and recall, and help you refine your metadata - so you can focus on building your app, not running tests.</p>
+        <p>appdiscoverability.com automates this entire loop. We run your prompts, track precision and recall, and help you refine your metadata - so you can focus on building your app, not running tests.</p>
+        <p><a href="/begin">Join the waitlist →</a></p>
 
         <h3>Coming Soon: Organic Discoverability</h3>
         <p>Everything above optimizes how your app performs when it's connected. But there's another question you'll need to answer: <strong>is your app being displayed in the first place?</strong></p>
@@ -352,8 +353,8 @@ const sections: ScrollSection[] = [
           <li>How often are you appearing versus competitors?</li>
           <li>Which prompts are you winning, and which are you missing?</li>
         </ul>
-        <p>This requires data at scale - and that's what AppDiscoverability.com provides. We test prompts across the ecosystem to show you where you're appearing, where you're not, and what to optimize next.</p>
-        <p><a href="/#waitlist">Sign up to the waitlist →</a></p>
+        <p>This requires data at scale - and that's what appdiscoverability.com provides. We test prompts across the ecosystem to show you where you're appearing, where you're not, and what to optimize next.</p>
+        <p><a href="/begin">Sign up to the waitlist →</a></p>
       </div>
     )
   },
