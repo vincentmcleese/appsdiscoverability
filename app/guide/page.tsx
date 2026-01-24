@@ -4,7 +4,7 @@ import { ContentScroll, ScrollSection } from "@/components/ui/content-scroll";
 
 export const metadata = {
   title: "The Complete Guide to ChatGPT App Discoverability - Appdiscoverability.com",
-  description: "A practical playbook for getting your ChatGPT app found—grounded in official documentation and real-world testing.",
+  description: "A practical playbook for getting your app found - grounded in official documentation and real-world testing.",
 };
 
 const proseClasses = `prose prose-invert prose-slate max-w-none
@@ -447,7 +447,7 @@ export default function GuidePage() {
             The Complete Guide to ChatGPT App Discoverability
           </h1>
           <p className="text-xl text-slate-400">
-            A practical playbook for getting your app found—grounded in official documentation and real-world testing.
+            A practical playbook for getting your app found - grounded in official documentation and real-world testing.
           </p>
         </div>
       </section>
