@@ -27,16 +27,17 @@ const sections: ScrollSection[] = [
     content: (
       <div className={proseClasses}>
         <p>You built a great ChatGPT app. It works perfectly. Users love it when they find it.</p>
-        <p>But here's the brutal truth: <strong>if users can't find your app, it may as well not exist.</strong></p>
+        <p>But <strong>if users can't find your app, it may as well not exist.</strong></p>
 
         <h3>Why Discoverability is the Bottleneck</h3>
-        <p>ChatGPT has +850 million weekly active users. The App Store is live and growing. But unlike the early days of the iPhone App Store—where getting in early meant automatic visibility—ChatGPT apps don't get discovered by accident. There's no "new releases" section that guarantees eyeballs.</p>
-        <p><strong>Discoverability is the bottleneck for growth.</strong> You can build the most useful app in the ecosystem, but if ChatGPT doesn't know when to suggest it—or if users can't find it when they search—you'll get zero installs.</p>
+        <p>ChatGPT has +850 million weekly active users. The App Store is live and growing. But unlike the early days of the iPhone App Store - where getting in early meant automatic visibility - ChatGPT apps don't get discovered by accident. There's no "new releases" section (yet) that guarantees eyeballs.</p>
+        <p><strong>Discoverability is the bottleneck for growth.</strong> You can build the most useful app in the ecosystem, but if ChatGPT doesn't know when to suggest it - or if users can't find it when they search - your app won't get used.</p>
         <p>The developers who understand this early will dominate the rankings as the ecosystem matures. Just like mobile ASO (App Store Optimization) became a discipline unto itself, ChatGPT app discoverability will become essential knowledge for anyone building in this space.</p>
 
         <h3>How ChatGPT Discovery is Different</h3>
-        <p>The ChatGPT App Store works like traditional app stores—users can browse categories and search for apps. But there's a second discovery channel that's unique to ChatGPT: apps can also appear organically during conversations when the LLM decides they're relevant to what the user is trying to do.</p>
-        <p>This means your metadata does double duty. It helps you rank in search results, AND it tells ChatGPT when to suggest your app mid-conversation.</p>
+        <p>Early signs show the ChatGPT App Store will work like traditional app stores - users can browse categories and search for apps. But there's a second discovery channel that's unique to ChatGPT: apps can also appear organically during conversations when the LLM decides they're relevant to what the user is trying to do.</p>
+        <p>This presents a new major opportunity for your app to appear after high volume, highly specific prompts when the user is at the exact moment of intent.</p>
+        <p>Therefore, this means your metadata does double duty. It helps you rank in search results, AND it tells ChatGPT when to suggest your app mid-conversation.</p>
         <p>This guide covers both channels and what actually matters for each.</p>
       </div>
     )
@@ -49,7 +50,7 @@ const sections: ScrollSection[] = [
         <p>ChatGPT app discoverability happens in two distinct places:</p>
 
         <h3>Channel 1: App Store Search (Static)</h3>
-        <p>When users search for apps in the ChatGPT App Store, your app needs to rank for relevant keywords. This is traditional SEO—keywords in your name, description, and metadata determine where you appear in search results.</p>
+        <p>When users search for apps in the ChatGPT App Store, your app needs to rank for relevant keywords. This is traditional ASO—keywords in your name, description, and metadata determine where you appear in search results.</p>
 
         <h3>Channel 2: Prompt Optimization (Dynamic)</h3>
         <p>When users have conversations in ChatGPT, the LLM decides which apps to suggest based on conversation context. Your tool descriptions tell ChatGPT when to invoke your app.</p>
@@ -59,7 +60,7 @@ const sections: ScrollSection[] = [
           <li><strong>Active discovery:</strong> "I need an app for X" → searches/browses App Store → finds your app</li>
           <li><strong>Passive discovery:</strong> "Help me do X" → ChatGPT suggests your app mid-conversation → user connects</li>
         </ol>
-        <p>Most developers only optimize for #1. The winners optimize for both.</p>
+        <p>Optimizing for both here is critical. And particularly passive discovery as this will be higher volume and you'll reach a user in their workflow at the exact moment of intent.</p>
 
         <h3>Appearance vs. Volume: The Two Questions</h3>
         <p>For each channel, there are two distinct questions to answer:</p>
@@ -88,8 +89,8 @@ const sections: ScrollSection[] = [
           </table>
         </div>
 
-        <p>Most developers only focus on the first question—getting their app to show up. But appearing for a keyword nobody searches, or a prompt nobody asks, doesn't drive installs.</p>
-        <p>The goal is to appear consistently for high-volume keywords and high-frequency prompts. Optimize for both appearance AND relevance.</p>
+        <p>But it's not just about chasing the highest volume keywords and prompts. You also want to appear for prompts that are highly specific to your use case - where your app and its tools are genuinely aligned with what the user is requesting. These specific prompts give you the highest likelihood of actual usage, because when your tool is the right fit, users convert.</p>
+        <p>But high volume alone isn't the goal. You want prompts that balance volume, specificity to your use case, and relevance to your target audience. The sweet spot is prompts asked frequently by your ideal users for tasks your app handles exceptionally well.</p>
       </div>
     )
   },
@@ -98,40 +99,33 @@ const sections: ScrollSection[] = [
     title: "PART 1: Before You Optimize",
     content: (
       <div className={proseClasses}>
-        <h3>Establish Your Baseline: The Golden Prompt Set</h3>
-        <p>Before tuning any metadata, assemble a labeled dataset. This comes directly from <a href="https://developers.openai.com/apps-sdk/guides/optimize-metadata" target="_blank" rel="noopener noreferrer">OpenAI's official guidance</a>.</p>
-        
-        <p><strong>Why start here?</strong> You can't optimize what you can't measure. The golden prompt set becomes your testing framework—the benchmark you'll use to evaluate every metadata change you make. Without it, you're guessing.</p>
-        
-        <p><strong>When do you create this?</strong> Build your golden prompt set during development, before you submit your app. You'll use it for:</p>
-        <ul>
-          <li><strong>Pre-submission testing</strong> – Validate your metadata works before you submit</li>
-          <li><strong>Submission test cases</strong> – OpenAI requires 5+ test cases; your golden set becomes the foundation</li>
-          <li><strong>Regression testing</strong> – Every time you update metadata, rerun the same prompts to track improvements</li>
-          <li><strong>Production monitoring</strong> – Periodically replay your prompts to catch metadata drift</li>
-        </ul>
+        <h3>Why Metadata Matters</h3>
+        <p>ChatGPT decides when to call your app based on the metadata you provide. Your app name, description, tool names, and parameter docs all feed into how the model determines whether your app is relevant to a user's request.</p>
+        <p>Well-crafted metadata increases recall on relevant prompts and reduces accidental activations. Poor metadata means your app either doesn't show up when it should, or shows up when it shouldn't - both hurt user trust and your discoverability.</p>
+        <p>Treat metadata like product copy. It needs iteration, testing, and analytics - not a one-time setup.</p>
 
-        <p><strong>The three categories:</strong></p>
+        <h3>Gather a Golden Prompt Set</h3>
+        <p>Before you tune metadata, assemble a labelled dataset. This becomes your testing baseline for every change you make.</p>
         
-        <p><strong>1. Direct prompts</strong> – Users explicitly name your product or data source.</p>
+        <p><strong>Direct prompts</strong> – users explicitly name your product or data source.</p>
         <ul>
           <li>"Use Notion to create a task called X"</li>
           <li>"ChatGig, create a gig for this contract"</li>
         </ul>
 
-        <p><strong>2. Indirect prompts</strong> – Users describe the outcome they want without naming your tool.</p>
+        <p><strong>Indirect prompts</strong> – users describe the outcome they want without naming your tool.</p>
         <ul>
           <li>"I need to organize my notes"</li>
           <li>"Help me find a freelancer to finish this contract"</li>
         </ul>
 
-        <p><strong>3. Negative prompts</strong> – Cases where built-in tools or other connectors should handle the request.</p>
+        <p><strong>Negative prompts</strong> – cases where built-in tools or other connectors should handle the request.</p>
         <ul>
           <li>"Tell me about the best project management tools"</li>
           <li>"What's the history of the gig economy"</li>
         </ul>
 
-        <p>Document the expected behavior for each prompt (should your tool trigger, stay silent, or defer to another tool?). This set becomes the backbone of your entire optimization process.</p>
+        <p>Document the expected behaviour for each prompt: should your tool be called, do nothing, or defer to an alternative?</p>
       </div>
     )
   },
@@ -146,17 +140,10 @@ const sections: ScrollSection[] = [
         <h3>What to Optimize</h3>
         
         <h4>App Name</h4>
-        <p>Include your most important keyword. This is prime real estate.</p>
+        <p>Either your company name or ideally, think about your most important keyword. This is prime real estate.</p>
 
         <h4>Description</h4>
         <p>Write naturally for users, but include relevant keywords. Your description appears in search results.</p>
-
-        <h4>Starter Prompts</h4>
-        <p>These show up in search results. Use them to showcase your best use cases with relevant keywords.</p>
-        <ul>
-          <li>✅ "Create a presentation from my notes"</li>
-          <li>❌ "Use my app"</li>
-        </ul>
 
         <h4>Screenshots</h4>
         <p>Must be exactly <strong>706 pixels wide</strong> (per submission requirements). Show:</p>
@@ -193,12 +180,14 @@ const sections: ScrollSection[] = [
       <div className={proseClasses}>
         <p>This is where the official OpenAI documentation provides the most guidance. Everything in this section is grounded in their <a href="https://developers.openai.com/apps-sdk/guides/optimize-metadata" target="_blank" rel="noopener noreferrer">Optimize Metadata guide</a>.</p>
 
-        <h3>How Organic Recommendations Work</h3>
-        <p>ChatGPT decides when to call your app based on the metadata you provide. Well-crafted names, descriptions, and parameter docs increase recall on relevant prompts and reduce accidental activations.</p>
+        <h3>Tool Execution vs Organic Discoverability</h3>
+        <p>Right now, what you're optimizing for is <strong>tool execution</strong> - making sure your app responds correctly when it's called. The right tool fires, with the right parameters, producing the right output.</p>
+        <p>Soon, the same metadata will likely determine <strong>organic discoverability</strong> too - whether ChatGPT suggests your app to users mid-conversation.</p>
+        <p>But since tool execution is what you can test and measure today, that's where this section focuses.</p>
 
-        <blockquote>
-          <p>"Treat metadata like product copy—it needs iteration, testing, and analytics."<br/>— OpenAI Apps SDK</p>
-        </blockquote>
+        <h3>How Organic Recommendations Work</h3>
+        <p>During a conversation, ChatGPT evaluates whether any connected apps might help with what the user is trying to do. It reads your tool names, descriptions, and parameter docs to decide if your app is a good fit for the current request - and if so, suggests it to the user.</p>
+        <p>This is different from App Store search. The model is interpreting intent and matching it against what your tools can do.</p>
 
         <blockquote>
           <p><strong>Our observation:</strong> Organic discoverability was briefly enabled, then disabled after users thought the suggestions were ads. When it returns, apps with optimized metadata will have a significant advantage.</p>
@@ -209,7 +198,7 @@ const sections: ScrollSection[] = [
 
         <p><strong>Prior usage creates preference.</strong> If a user has used your app before, ChatGPT is more likely to suggest it again for related prompts. Your first impression matters—get users to try your app once, and you've increased your future discoverability with that user.</p>
 
-        <p><strong>Memory and context matter.</strong> ChatGPT's memory about user preferences and past activities can influence which apps surface. A user who frequently works on presentations may see design apps suggested more often.</p>
+        <p><strong>Memory and context matter.</strong> ChatGPT's memory about user preferences and past activities can influence which apps surface. A user who frequently works on presentations may see design apps suggested more often. If a user enables memories, ChatGPT can pass that context to your MCP server during tool calls - you won't get to keep the data, but you can use it in the moment to tailor the experience and increase the likelihood your app gets suggested and improve the experience for the user.</p>
 
         <p><strong>Conversation depth affects suggestions.</strong> Apps may surface differently at turn 1 of a conversation versus turn 10. The accumulated context changes what ChatGPT considers relevant.</p>
 
@@ -278,7 +267,7 @@ const sections: ScrollSection[] = [
         <h4>4. Tool Hints</h4>
         <p><strong>Official guidance:</strong> Use these annotations to help ChatGPT handle your tools appropriately:</p>
         <ul>
-          <li><code>readOnlyHint: true</code> – For tools that never mutate state (streamlines confirmation)</li>
+          <li><code>readOnlyHint: true</code> – For tools that only retrieve or compute information and never create, update, delete, or send data outside of ChatGPT.</li>
           <li><code>destructiveHint: false</code> – For tools that don't delete or overwrite user data</li>
           <li><code>openWorldHint: false</code> – For tools that don't publish content or reach outside the user's account</li>
         </ul>
@@ -323,51 +312,48 @@ const sections: ScrollSection[] = [
   },
   {
     id: "part-4-testing-iteration",
-    title: "PART 4: Testing & Iteration Loop",
+    title: "PART 4: Testing & Iteration",
     content: (
       <div className={proseClasses}>
-        <h3>Setup</h3>
-        <p>You need ChatGPT Plus ($20/mo) for Developer Mode:</p>
-        <ul>
-          <li>Settings → Apps & Connectors → Advanced Settings → Enable Developer Mode</li>
-        </ul>
-        <p>Use ngrok for local testing or deploy your MCP server publicly.</p>
+        <h3>Option 1: Do It Yourself</h3>
 
-        <h3>Process (from Official Docs)</h3>
-        
-        <p><strong>1. Link your connector</strong><br/>
-        Add custom connector, paste MCP URL, complete OAuth if needed.</p>
+        <h4>Stage 1: Evaluate in Developer Mode</h4>
+        <p>You need ChatGPT Plus ($20/mo) to access Developer Mode. Enable it via Settings → Apps & Connectors → Advanced Settings.</p>
+        <ol>
+          <li>Link your connector in ChatGPT developer mode</li>
+          <li>Run through each prompt in your golden set (from PART 1) and record the outcome - which tool was selected, what arguments were passed, and whether the component rendered correctly</li>
+          <li>Track precision (did the right tool run?) and recall (did the tool run when it should?)</li>
+        </ol>
+        <p>If the model picks the wrong tool - or fails to pick yours - you've identified a metadata problem.</p>
 
-        <p><strong>2. Run your golden prompt set</strong><br/>
-        For each prompt, track:</p>
-        <ul>
-          <li><strong>Precision:</strong> Did the right tool run?</li>
-          <li><strong>Recall:</strong> Did the tool run when it should?</li>
-        </ul>
+        <h4>Stage 2: Iterate Methodically</h4>
+        <p><strong>Change one thing at a time.</strong> If you change multiple metadata fields at once, you won't know which change caused the improvement or regression.</p>
+        <p><strong>Keep a log of revisions.</strong> Document each change with timestamps and test results. This becomes your optimization history.</p>
+        <p><strong>Rerun your golden prompt set after every change.</strong> Compare results to your previous run. Aim for high precision on negative prompts before chasing marginal recall improvements.</p>
 
-        <p><strong>3. Change ONE thing at a time</strong></p>
-        <blockquote>
-          <p>"Change one metadata field at a time so you can attribute improvements."</p>
-        </blockquote>
-
-        <p><strong>4. Keep a log with timestamps</strong></p>
-        <blockquote>
-          <p>"Keep a log of revisions with timestamps and test results. Share diffs with reviewers to catch ambiguous copy before you deploy it."</p>
-        </blockquote>
-
-        <p>After each revision, repeat the evaluation. Aim for high precision on negative prompts before chasing marginal recall improvements.</p>
-
-        <h3>Production Monitoring (from Official Docs)</h3>
-        <p>Once your connector is live:</p>
+        <h4>Stage 3: Production Monitoring</h4>
+        <p>Once your connector is live, the work isn't done.</p>
         <ul>
           <li><strong>Review tool-call analytics weekly.</strong> Spikes in "wrong tool" confirmations usually indicate metadata drift.</li>
           <li><strong>Capture user feedback</strong> and update descriptions to cover common misconceptions.</li>
-          <li><strong>Schedule periodic prompt replays</strong>, especially after adding new tools or changing structured fields.</li>
+          <li><strong>Schedule periodic prompt replays</strong> - especially after adding new tools or changing structured fields.</li>
         </ul>
 
-        <blockquote>
-          <p>"Treat metadata as a living asset. The more intentional you are with wording and evaluation, the easier discovery and invocation become."</p>
-        </blockquote>
+        <h3>Option 2: Automate with AppDiscoverability.com</h3>
+        <p>The DIY approach works, but it's manual and time-consuming. Every metadata change requires re-running your golden prompt set, logging results, and iterating again.</p>
+        <p>AppDiscoverability.com automates this entire loop. We run your prompts, track precision and recall, and help you refine your metadata - so you can focus on building your app, not running tests.</p>
+
+        <h3>Coming Soon: Organic Discoverability</h3>
+        <p>Everything above optimizes how your app performs when it's connected. But there's another question you'll need to answer: <strong>is your app being displayed in the first place?</strong></p>
+        <p>Once organic discoverability is live, ChatGPT will suggest apps mid-conversation to users who haven't connected them yet. The same metadata you're optimizing now will determine whether you get surfaced.</p>
+        <p>But you won't be able to test this in developer mode - you're only seeing your own connected instance. To understand organic discoverability, you need to know:</p>
+        <ul>
+          <li>Is your app appearing for the prompts that matter to your target audience?</li>
+          <li>How often are you appearing versus competitors?</li>
+          <li>Which prompts are you winning, and which are you missing?</li>
+        </ul>
+        <p>This requires data at scale - and that's what AppDiscoverability.com provides. We test prompts across the ecosystem to show you where you're appearing, where you're not, and what to optimize next.</p>
+        <p><a href="/#waitlist">Sign up to the waitlist →</a></p>
       </div>
     )
   },
@@ -429,7 +415,9 @@ const sections: ScrollSection[] = [
 
         <p><strong>Metadata is a living asset.</strong> The more intentional you are with wording and evaluation, the easier discovery and invocation become.</p>
 
-        <p className="text-slate-500 text-sm mt-12">
+        <hr className="my-8" />
+
+        <p className="text-slate-500 text-sm">
           Last updated: January 2026
         </p>
       </div>
