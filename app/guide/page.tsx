@@ -359,49 +359,6 @@ const sections: ScrollSection[] = [
     )
   },
   {
-    id: "part-5-what-works",
-    title: "PART 5: What Works & What to Avoid",
-    content: (
-      <div className={proseClasses}>
-        <h3>What Works Well</h3>
-
-        <p><strong>Fixed templates with clear outputs</strong><br/>
-        Diagrams, charts, forms. Anything where the format is predictable and the output is clear.</p>
-
-        <p><strong>Workflow handoffs to external services</strong><br/>
-        Natural transition points from "working in ChatGPT" to "need an external service." The key is preserving context across that handoff.</p>
-
-        <p><strong>Eliminating context switching</strong><br/>
-        Users are already in ChatGPT. Anything that keeps them there instead of forcing them to open another tab is valuable.</p>
-
-        <h3>What to Avoid</h3>
-
-        <p><strong>Long-form or static content</strong><br/>
-        If users need to scroll through pages of content, that's not a chat experience.</p>
-
-        <p><strong>Complex multi-step workflows</strong><br/>
-        If your workflow requires 10 steps with conditional branching, the chat interface probably isn't optimal.</p>
-
-        <p><strong>Heavy visual browsing</strong><br/>
-        Shopping, design exploration, anything where users need to see 50 options at once. The window is too limited.</p>
-
-        <p><strong>Duplicating ChatGPT's system functions</strong><br/>
-        Don't rebuild text analysis or summarization. Find the gaps where ChatGPT needs external data or specialized functionality.</p>
-
-        <h3>Our Observations & Testing</h3>
-        <p>The following are based on our testing and experience, not official documentation:</p>
-        <ul>
-          <li>App Store current state observations</li>
-          <li>Organic discoverability status observations</li>
-          <li>Screenshot dimension requirements (706px wide)</li>
-          <li>Specific submission process details</li>
-          <li>Use case recommendations (what works/what to avoid)</li>
-          <li>Analysis of how major B2B apps structure their tool descriptions</li>
-        </ul>
-      </div>
-    )
-  },
-  {
     id: "final-thoughts",
     title: "Final Thoughts",
     content: (

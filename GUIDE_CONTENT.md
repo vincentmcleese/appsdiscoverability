@@ -255,7 +255,9 @@ It goes on to specify output formatting rules, PII guardrails, and instructions 
 
 Right now, what you're optimizing for is **tool execution** - making sure your app responds correctly when it's called. The right tool fires, with the right parameters, producing the right output.
 
-Soon, the same metadata will likely determine **organic discoverability** too - whether ChatGPT suggests your app to users mid-conversation. But since tool execution is what you can test and measure today, here are two ways to do it.
+Soon, the same metadata will likely determine **organic discoverability** too - whether ChatGPT suggests your app to users mid-conversation. 
+
+But since tool execution is what you can test and measure today, here are two ways to do it.
 
 ### Option 1: Do It Yourself
 
@@ -306,46 +308,6 @@ But you won't be able to test this in developer mode - you're only seeing your o
 This requires data at scale - and that's what AppDiscoverability.com provides. We test prompts across the ecosystem to show you where you're appearing, where you're not, and what to optimize next.
 
 [Sign up to the waitlist →](#waitlist)
-
----
-
-## PART 5: What Works & What to Avoid
-
-### What Works Well
-
-**Fixed templates with clear outputs**
-Diagrams, charts, forms. Anything where the format is predictable and the output is clear.
-
-**Workflow handoffs to external services**
-Natural transition points from "working in ChatGPT" to "need an external service." The key is preserving context across that handoff.
-
-**Eliminating context switching**
-Users are already in ChatGPT. Anything that keeps them there instead of forcing them to open another tab is valuable.
-
-### What to Avoid
-
-**Long-form or static content**
-If users need to scroll through pages of content, that's not a chat experience.
-
-**Complex multi-step workflows**
-If your workflow requires 10 steps with conditional branching, the chat interface probably isn't optimal.
-
-**Heavy visual browsing**
-Shopping, design exploration, anything where users need to see 50 options at once. The window is too limited.
-
-**Duplicating ChatGPT's system functions**
-Don't rebuild text analysis or summarization. Find the gaps where ChatGPT needs external data or specialized functionality.
-
-### Our Observations & Testing
-
-The following are based on our testing and experience, not official documentation:
-
-- App Store current state observations
-- Organic discoverability status observations
-- Screenshot dimension requirements (706px wide)
-- Specific submission process details
-- Use case recommendations (what works/what to avoid)
-- Analysis of how major B2B apps structure their tool descriptions
 
 ---
 
