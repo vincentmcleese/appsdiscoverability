@@ -8,7 +8,7 @@ import { MainContent } from "../components/MainContent";
 import { neueMontreal } from "./fonts";
 import SmoothScroll from "../components/SmoothScroll";
 
-const GA_MEASUREMENT_ID = "G-BVX33VY3NJ";
+const GA_MEASUREMENT_ID = "G-Y8G5LSKGFR";
 
 
 export const metadata: Metadata = {
